@@ -1,11 +1,12 @@
 ---
 title: "HW 04 - Modeling the GSS"
+author: Carolyn Powers 
 output: html_document
 ---
 
 ```{r include = FALSE}
 knitr::opts_chunk$set(
-  eval = FALSE,
+  eval = TRUE,
   out.width = "80%",
   fig.asp = 0.618,
   fig.width = 10,
@@ -64,7 +65,10 @@ The responses to the question on the GSS about this statement are in the `advfro
 ```{marginfigure}
 It's important that you don't recode the NAs, just the remaining levels.
 ```
-
+```{r eval=TRUE}
+gss16
+  cat <- gss16
+```
 1.  Re-level the `advfront` variable such that it has two levels: `Strongly agree` and "`Agree"` combined into a new level called `agree` and the remaining levels (except `NA`s) combined into "`Not agree"`. Then, re-order the levels in the following order: `"Agree"` and `"Not agree"`. Finally, `count()` how many times each new level appears in the `advfront` variable.
 
 ```{marginfigure}
